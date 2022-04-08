@@ -36,20 +36,20 @@
             </div>
             <div v-if="launchpool==true||page==5" class="sidebar_menu_item_hidden">
               <NuxtLink to="/stake" class="stake_active">Stake Bsw</NuxtLink>
-                <a href="" class="">Stake Tokens</a>
+              <NuxtLink to="/stake" class="stake_active">Stake Tokens</NuxtLink>
             </div>
         </div>
-        <div class="sidebar_menu_item">
-          <a class="" href="/">
+        <div class="sidebar_menu_item" :class="{sidebar_menu_active:page==6}">
+          <NuxtLink to="/ido">
             <SvgImport name="vuesax/bold/strongbox"/>
             <span>IDO</span>
-          </a>
+          </NuxtLink>
         </div>
-        <div class="sidebar_menu_item sidebar_menu_item--style_yellow">
-          <a class="" href="/">
+        <div class="sidebar_menu_item sidebar_menu_item--style_yellow" :class="{sidebar_menu_active:page==7}">
+          <NuxtLink to="/refferal">
             <SvgImport name="profile-2user"/>
             <span>Refferal program</span>
-          </a>
+          </NuxtLink>
         </div>
         <div class="sidebar_menu_item sidebar_menu_item--style_text">
           <a class="" href="/">

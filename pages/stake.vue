@@ -68,7 +68,7 @@
               <div class="item">
                 <div class="row">
                     <div class="imgs">
-                      <img class="full" src="/icons/bsw-full.png" alt="">
+                      <img class="full" src="/images/bsw-full.png" alt="">
                       <img class="small" src="/images/bsw-green.png" alt="">
                     </div>
                     <div class="column">
@@ -93,7 +93,7 @@
               <div class="item">
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/bsw-full.png" alt="">
                   <img class="small" src="/images/reload.png" alt="">
                 </div>
                 <div class="column">
@@ -117,7 +117,7 @@
               <div class="item">
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/bsw-full.png" alt="">
                   <img class="small" src="/images/bsw-green.png" alt="">
                 </div>
                 <div class="column">
