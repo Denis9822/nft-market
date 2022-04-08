@@ -26,7 +26,7 @@
                           </div>
                         </a>
                       </div>
-                  <img src="/images/nft3.png" alt="">
+                  <img src="/images/NFT3.png" alt="">
                 </div>
             </div>
           </div>
