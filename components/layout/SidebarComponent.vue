@@ -26,16 +26,16 @@
             <span>Farms</span>
           </NuxtLink>
         </div>
-        <div @click="launchpool = !launchpool" class="sidebar_menu_item">
+        <div @click="launchpool = !launchpool" class="sidebar_menu_item" :class="{sidebar_menu_active:page==5}">
             <div class="sidebar_menu_item_with-levels" >
               <SvgImport name="ion/rocket"/>
               <span>Launchpools</span>
-              <div class="arrow-down" :class="{menu_click:launchpool==true}" >
+              <div class="arrow-down" :class="{menu_click:launchpool==true||page==5}" >
                 <SvgImport name="Down"/>
               </div>
             </div>
-            <div v-if="launchpool==true" class="sidebar_menu_item_hidden">
-                <a href="" class="stake_active">Stake Bsw</a>
+            <div v-if="launchpool==true||page==5" class="sidebar_menu_item_hidden">
+              <NuxtLink to="/stake" class="stake_active">Stake Bsw</NuxtLink>
                 <a href="" class="">Stake Tokens</a>
             </div>
         </div>
