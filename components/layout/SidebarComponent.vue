@@ -51,11 +51,11 @@
             <span>Refferal program</span>
           </NuxtLink>
         </div>
-        <div class="sidebar_menu_item sidebar_menu_item--style_text">
-          <a class="" href="/">
+        <div class="sidebar_menu_item sidebar_menu_item--style_text" :class="{sidebar_menu_active:page==8}">
+          <NuxtLink to="/lottery">
             <SvgImport name="vuesax/bold/ticket-star"/>
             <span>Lottery</span>
-          </a>
+          </NuxtLink>
           <div class="sidebar_menu_item_info">
              Win
           </div>
@@ -67,7 +67,7 @@
 
 <script>
 import SvgImport from '~/components/layout/SvgImport'
-
+import Helper from '~/components/Helper';
 export default {
   name: "SidebarComponent",
   data: function () {
@@ -83,6 +83,7 @@ export default {
   },
   components:{
     SvgImport,
+    Helper,
   }
 }
 

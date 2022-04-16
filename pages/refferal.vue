@@ -8,10 +8,12 @@
                 <h1>Invite your friends. <br> Earn cryptocurrency together</h1>
                 <h2>
                   Earn up to 20% from friends’ swap commission on Biswap <br>and 5% from their earnings on Farms & Launchpools                </h2>
-                <div class="add_ref">
+              <a href="">
+              <div class="add_ref">
                   <img src="/images/people.png" alt="">
                   <span>Invite friends</span>
                 </div>
+              </a>
             </div>
           </div>
         <img class="ido_img" src="/images/refferal-img.png" alt="">
@@ -79,146 +81,17 @@
               <h2>
                 FAQ
               </h2>
-              <div class="lists">
-                <div class="item_wrap">
-                  <div class="item">
-                      <span>Where do I get my referral link?</span>
-                      <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
+            <ul class="lists">
+              <li  v-for="(faq, index) in faqItems" :key="index" class="item_wrap" :class="{'column-break':index == 6}" >
+                <div @click="showItem(index)" class="item">
+                  <span>{{faq.question}}</span>
+                  <img :class="{'active':statusShowItem[index]}" src="/images/down.png" alt="">
                 </div>
-
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How much crypto can I earn via the Swap Referral Program?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
+                <div class="item_hidden" :class="{'active':statusShowItem[index]}">
+                  {{faq.answer}}
                 </div>
-
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How do I invite a referral friend?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Is the Swap referral program active for all swap pairs?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Are there separate balances for referral rewards from friends' Swaps, Farms, Launchpools?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>What percentage of Swap referral rewards will I earn if I have 0 BSW staked in BSW Holder Pool?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How do I generate a new referral link?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How much can I earn from my friends' Farms & Launchpools?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How does profit sharing work?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Is Referral Program Active for all Launchpools?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Where are all my generated referral links?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>When will I get my referral reward from Farms & Launchpools?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>In what crypto currency the referral commission is accounted to my referral balance?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Can I profit from the Referral Program without any investments from my side?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Are there fees for referral rewards withdrawal from referral balances?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-
+              </li>
+            </ul>
               </div>
           </div>
         </div>
@@ -230,6 +103,83 @@
 import SvgImport from '~/components/layout/SvgImport'
 import Exchange from '~/components/Exchange'
 export default {
+  data: function () {
+    return {
+
+      statusShowItem: {},
+      faqItems: [
+        {
+          question: 'Where do I get my referral link?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How much crypto can I earn via the Swap Referral Program?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How do I invite a referral friend?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Is the Swap referral program active for all swap pairs?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Are there separate balances for referral rewards from friends\' Swaps, Farms, Launchpools?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'What percentage of Swap referral rewards will I earn if I have 0 BSW staked in BSW Holder Pool?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How do I generate a new referral link?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How much can I earn from my friends\' Farms & Launchpools?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How does profit sharing work?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Is Referral Program Active for all Launchpools?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Where are all my generated referral links?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'When will I get my referral reward from Farms & Launchpools?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'In what crypto currency the referral commission is accounted to my referral balance?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Can I profit from the Referral Program without any investments from my side?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Are there fees for referral rewards withdrawal from referral balances?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+      ],
+    }
+  },
+  methods: {
+    showItem(id) {
+      if (this.statusShowItem[id]) {
+        this.$set(this.statusShowItem, id, false);
+      } else {
+        this.$set(this.statusShowItem, id, true);
+      }
+    },
+  },
   mounted() {
     this.$nuxt.$emit('active-page', 7);
   },

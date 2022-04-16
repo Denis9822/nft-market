@@ -1,4 +1,5 @@
 <template>
+  <div>
   <header>
     <a href="">
       <div class="header_market">
@@ -14,24 +15,38 @@
               height="24"
             />
           </div>
-        <a href="">
-        <div class="btn_wallet">
+
+        <div @click="showModalWallet" class="btn_wallet">
           <SvgImport name="vuesax/bold/wallet-money"/>
           <span>Connect Wallet</span>
         </div>
-        </a>
+
       </div>
+
   </header>
+    <ConnectWallet ref="modal"/>
+  </div>
 </template>
 
 <script>
 import SvgImport from '~/components/layout/SvgImport'
+import ConnectWallet from '~/components/modals/ConnectWallet';
 
 export default {
   name: "HeaderComponent",
-
+  methods:{
+    showModalWallet(){
+      this.$refs.modal.modalWallet = true;
+    },
+  },
+  created(){
+    this.$nuxt.$on('showModalConnectWallet', data => {
+      this.$refs.modal.modalWallet = true;
+    })
+  },
   components:{
     SvgImport,
+    ConnectWallet,
   }
 }
 

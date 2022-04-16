@@ -10,10 +10,12 @@
                   Biswap Farms offer multiple farming opportunities to you. <br>Get double rewards by staking your LP tokens in return for
                   <br>additional BSW tokens and earning high income from <br>swap transactions
                 </h2>
+              <a href="">
                 <div class="add">
                   <span>Add project</span>
                   <img src="/images/plus.png" alt="">
                 </div>
+              </a>
             </div>
             <div class="column">
                 <div class="cyberdex">
@@ -35,14 +37,14 @@
         <div class="coins container">
           <div class="menu">
               <div class="links">
-                <a href="" class="active">Live</a>
-                <a href="" class="">Main</a>
-                <a href="" class="">Innovation</a>
-                <a href="" class="">GameFi</a>
-                <a href="" class="">Archive</a>
+                <span @click="typeActive = 'live'" :class="{active:typeActive == 'live'}">Live</span>
+                <span @click="typeActive = 'main'" :class="{active:typeActive == 'main'}">Main</span>
+                <span @click="typeActive = 'innovation'" :class="{active:typeActive == 'innovation'}">Innovation</span>
+                <span @click="typeActive = 'gamefi'" :class="{active:typeActive == 'gamefi'}">GameFi</span>
+                <span @click="typeActive = 'archive'" :class="{active:typeActive == 'archive'}">Archive</span>
               </div>
               <div class="staked">
-                  <div class="btn">
+                  <div @click="staked = !staked" class="btn" :class="{'stake-ellipse-true':staked}">
                     <img class="stake-ellipse" src="/images/stake-ellipse.png" alt="">
                     <img class="stake-row" src="/images/stake-row.png" alt="">
                   </div>
@@ -54,14 +56,23 @@
                       <input type="text" placeholder="Search farms">
                   </div>
                   <div class="select_wrap">
-                      <span>All</span>
-                      <SvgImport name="Down"/>
+                      <div @click="selectActive = !selectActive" class="click" >
+                        <span>{{ selectData }}</span>
+                        <SvgImport name="Down"/>
+                      </div>
+                      <div class="hidden" :class="{'hide':selectActive==false}">
+                        <span @click="selectData='All'">All</span>
+                          <span @click="selectData='Liquidity'">Liquidity</span>
+                          <span @click="selectData='Apr'" >Apr</span>
+                          <span @click="selectData='Stable'" >Stable</span>
+                      </div>
                   </div>
                   <div class="btn">
                     Harvest All
                   </div>
               </div>
           </div>
+
           <div class="coin_wrap">
               <div class="row">
                   <div class="status red">
@@ -80,13 +91,13 @@
                       <p>APY</p>
                       <div class="d_flex">
                         <span>219.46%</span>
-                        <img src="/images/farms-help.png" alt="">
+                        <Helper typeImg="1" nameImg="farms-help.png" />
                       </div>
                   </div>
                   <div class="apr">
                     <div class="d_flex d_flex1">
                       <p>APR</p>
-                      <img src="/images/farms-help.png" alt="">
+                      <Helper typeImg="1" nameImg="farms-help.png" />
                     </div>
                     <div class="d_flex">
                       <span>219.46%</span>
@@ -97,68 +108,47 @@
                     <p>Liquidity</p>
                     <div class="d_flex">
                       <span>219.46%</span>
-                      <img src="/images/farms-help.png" alt="">
+                      <Helper typeImg="1" nameImg="farms-help.png" />
                     </div>
                   </div>
                   <div class="earn">
                       <p>Earned</p>
                       <span>-</span>
                   </div>
-                      <div class="details">
+                      <div @click="detailsRow = !detailsRow" class="details">
                       <span>Details</span>
                       <img src="/images/down.png" alt="">
                   </div>
                   <div class="warning">
-                    <img src="/images/farms-warning.png" alt="">
+                    <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
                   </div>
               </div>
-            <div class="row">
-              <div class="status red">
-                Hot
+            <div v-if="detailsRow" class="row row_hidden">
+              <div class="getlp">
+                Get LP
               </div>
-              <div class="coins">
-                <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+               <div class="available">
+                 <h4>Available LP</h4>
+                 <span>0 LP</span>
+                 <p>$0.0000</p>
+               </div>
+                <div class="btn_next">
+                  <img src="/images/next.png" alt="">
                 </div>
-                <div class="name">
-                  USDT-BSW
+                <div @click="showModalWallet" class="btn_wallet">
+                  <SvgImport name="card-tick"/>
+                  <span>Unlock Wallet</span>
                 </div>
+              <div class="btn_next">
+                <img src="/images/next.png" alt="">
               </div>
-              <div class="apy">
-                <p>APY</p>
-                <div class="d_flex">
-                  <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
-                </div>
+              <div class="btn_harvest">
+                Harvest
               </div>
-              <div class="apr">
-                <div class="d_flex d_flex1">
-                  <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
-                </div>
-                <div class="d_flex">
-                  <span>219.46%</span>
-                  <img src="/images/farms-computing.png" alt="">
-                </div>
-              </div>
-              <div class="liq">
-                <p>Liquidity</p>
-                <div class="d_flex">
-                  <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
-                </div>
-              </div>
-              <div>
-                <p>Earned</p>
-                <span>-</span>
-              </div>
-              <div class="details">
-                <span>Details</span>
-                <img src="/images/down.png" alt="">
-              </div>
-              <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+              <div class="earned">
+                <h4>Earned</h4>
+                <span>0 BSW</span>
+                <p>$0.0000</p>
               </div>
             </div>
             <div class="row">
@@ -178,13 +168,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -195,19 +185,68 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="status red">
+                Hot
+              </div>
+              <div class="coins">
+                <div class="imgs">
+                  <img src="/icons/usdt.png" alt="">
+                  <img src="/icons/bsw.png" alt="">
+                </div>
+                <div class="name">
+                  USDT-BSW
+                </div>
+              </div>
+              <div class="apy">
+                <p>APY</p>
+                <div class="d_flex">
+                  <span>219.46%</span>
+                  <Helper typeImg="1" nameImg="farms-help.png" />
+                </div>
+              </div>
+              <div class="apr">
+                <div class="d_flex d_flex1">
+                  <p>APR</p>
+                  <Helper typeImg="1" nameImg="farms-help.png" />
+                </div>
+                <div class="d_flex">
+                  <span>219.46%</span>
+                  <img src="/images/farms-computing.png" alt="">
+                </div>
+              </div>
+              <div class="liq">
+                <p>Liquidity</p>
+                <div class="d_flex">
+                  <span>219.46%</span>
+                  <Helper typeImg="1" nameImg="farms-help.png" />
+                </div>
+              </div>
+              <div class="earn">
+                <p>Earned</p>
+                <span>-</span>
+              </div>
+              <div @click="detailsRow = !detailsRow" class="details">
+                <span>Details</span>
+                <img src="/images/down.png" alt="">
+              </div>
+              <div class="warning">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
             <div class="row">
@@ -227,13 +266,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -244,19 +283,19 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
             <div class="row">
@@ -276,13 +315,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -293,19 +332,19 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
             <div class="row">
@@ -325,13 +364,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -342,19 +381,19 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
             <div class="row">
@@ -374,13 +413,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -391,19 +430,19 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
             <div class="row">
@@ -423,13 +462,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -440,19 +479,19 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
             <div class="row">
@@ -472,13 +511,13 @@
                 <p>APY</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
               <div class="apr">
                 <div class="d_flex d_flex1">
                   <p>APR</p>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
                 <div class="d_flex">
                   <span>219.46%</span>
@@ -489,19 +528,19 @@
                 <p>Liquidity</p>
                 <div class="d_flex">
                   <span>219.46%</span>
-                  <img src="/images/farms-help.png" alt="">
+                  <Helper typeImg="1" nameImg="farms-help.png" />
                 </div>
               </div>
-              <div>
+              <div class="earn">
                 <p>Earned</p>
                 <span>-</span>
               </div>
-              <div class="details">
+              <div @click="detailsRow = !detailsRow" class="details">
                 <span>Details</span>
                 <img src="/images/down.png" alt="">
               </div>
               <div class="warning">
-                <img src="/images/farms-warning.png" alt="">
+                <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
           </div>
@@ -514,10 +553,12 @@
                 <h2>Launch Your Project on Biswap <br>Now!</h2>
                 <span>Farms stimulate users to provide liquidity for your trading pair by distributing BSW tokens to your pair’s LP token holders. Launchpool is a platform where a project owner can distribute tokens to BNB users who stake BSW tokens in the pool. When a project applies for Biswap Launchpool we can also create a new farming pair (subject to discussion) </span>
                 <span>Biswap Launchpool and Farms are platforms that help project teams promote their token and get exposure to thousands of active Biswap users across the globe. We look for strong teams with clear and innovative vision in the crypto space. If you think you are one of the projects, do not wait any longer and apply below.</span>
+                <a href="">
                 <div class="btn">
                   <SvgImport name="tick-circle"/>
                   <p>Apply to Launch</p>
                 </div>
+                </a>
               </div>
              <img src="/images/launch-img.png" alt="">
            </div>
@@ -568,13 +609,32 @@
 <script>
 import SvgImport from '~/components/layout/SvgImport'
 import Exchange from '~/components/Exchange'
+import DetailsHelper from '~/components/farms/DetailsHelper'
+import Helper from '~/components/Helper';
 export default {
   mounted() {
     this.$nuxt.$emit('active-page', 4);
   },
+  methods: {
+    showModalWallet(){
+      this.$nuxt.$emit('showModalConnectWallet');
+    }
+  },
+  data: function () {
+    return {
+      typeActive:"live",
+      staked:false,
+      search:null,
+      selectActive:false,
+      selectData:'All',
+      detailsRow:false,
+    }
+  },
   components:{
     SvgImport,
     Exchange,
+    Helper,
+    DetailsHelper,
   }
 }
 </script>

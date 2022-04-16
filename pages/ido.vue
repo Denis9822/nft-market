@@ -9,10 +9,12 @@
                 <h2>
                   Buy new tokens directly for BSW on Biswap. Maximize your profit <br>by participating in the Initial DEX Offerings.
                 </h2>
+              <a href="">
                 <div class="add">
                   <span>Launch your project</span>
                   <img src="/images/plus.png" alt="">
                 </div>
+              </a>
             </div>
           </div>
         <img class="ido_img" src="/images/ido-img.png" alt="">
@@ -20,14 +22,10 @@
       <div class="bg_w">
         <div class="container">
           <div class="ido_lists">
-              <div class="menu">
-                  <div class="link active">
-                      Active
-                  </div>
-                <div class="link">
-                  Inactive
-                </div>
-              </div>
+            <div class="links">
+              <span @click="typeActive = 'active'" :class="{active:typeActive == 'active'}">Active</span>
+              <span @click="typeActive = 'inactive'" :class="{active:typeActive == 'inactive'}">Inactive</span>
+            </div>
             <div class="list">
                 <div class="about">
                     <div class="logo_status">
@@ -183,75 +181,17 @@
               <h2>
                 FAQ
               </h2>
-              <div class="lists">
-                <div class="item_wrap">
-                  <div class="item">
-                      <span>What's duration of XPS IDO on Biswap Launchpad?</span>
-                      <img src="/images/down.png" alt="">
+              <ul class="lists">
+                <li  v-for="(faq, index) in faqItems" :key="index" class="item_wrap" :class="{'column-break':index == 3}" >
+                  <div @click="showItem(index)" class="item">
+                      <span>{{faq.question}}</span>
+                      <img :class="{'active':statusShowItem[index]}" src="/images/down.png" alt="">
                   </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  <div class="item_hidden" :class="{'active':statusShowItem[index]}">
+                    {{faq.answer}}
                   </div>
-                </div>
-
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Is there any fee to participate?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>What's the difference between limited and unlimited deposit options for participation?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>Can I participate in both the limited and unlimited deposit options at the same time?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How are tokens distributed on the launchpad, depending on the amount of funds collected?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>When can I withdraw gained tokens on Biswap Launchpad?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-                <div class="item_wrap">
-                  <div class="item">
-                    <span>How are tokens distributed on the launchpad, depending on the amount of funds collected?</span>
-                    <img src="/images/down.png" alt="">
-                  </div>
-                  <div class="item_hidden">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                  </div>
-                </div>
-
-              </div>
+                </li>
+              </ul>
           </div>
           <div class="apply_project">
             <div class="bg-1"></div>
@@ -262,9 +202,11 @@
             <div class="column">
               <h2>Want to launch your project <br> on Biswap IDO Launchpad?</h2>
               <h3>Launch your project on Biswap to introduce it to the most fast-growing <br>and active community on BNB CHAIN.</h3>
+              <a href="">
               <div class="btn">
                 Apply to launch
               </div>
+              </a>
             </div>
           </div>
         </div>
@@ -278,6 +220,51 @@ import Exchange from '~/components/Exchange'
 export default {
   mounted() {
     this.$nuxt.$emit('active-page', 6);
+  },
+  data: function () {
+    return {
+      typeActive: 'active',
+      statusShowItem: {},
+      faqItems: [
+        {
+          question: 'What\'s duration of XPS IDO on Biswap Launchpad?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Is there any fee to participate?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'What\'s the difference between limited and unlimited deposit options for participation?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'Can I participate in both the limited and unlimited deposit options at the same time?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How are tokens distributed on the launchpad, depending on the amount of funds collected?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'When can I withdraw gained tokens on Biswap Launchpad?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+        {
+          question: 'How are tokens distributed on the launchpad, depending on the amount of funds collected?',
+          answer: 'Answer text duration of XPS IDO on Biswap Launchpad'
+        },
+      ],
+    }
+  },
+  methods: {
+    showItem(id) {
+      if (this.statusShowItem[id]) {
+        this.$set(this.statusShowItem, id, false);
+      } else {
+        this.$set(this.statusShowItem, id, true);
+      }
+    },
   },
   components:{
     SvgImport,

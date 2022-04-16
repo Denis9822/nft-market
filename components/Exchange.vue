@@ -4,7 +4,7 @@
     <div class="bg-ellipse-red"></div>
     <div class="bg-ellipse-green"></div>
     <div class="exchange">
-      <h2>{{h2}}</h2>
+      <h2>{{ h2 }}</h2>
       <h3 v-html="about"></h3>
       <div v-if="pageActive==1" class="q_w">
         <div class="quick_use">
@@ -15,7 +15,7 @@
                 <p>0.000000 BSW</p>
               </div>
               <div class="help">
-                <img src="/images/help.png" alt="">
+                <Helper typeImg="1" nameImg="help.png"/>
               </div>
             </div>
             <a href="">
@@ -29,7 +29,7 @@
                 <p>0.00000 RB</p>
               </div>
               <div class="help right-m">
-                <img src="/images/help.png" alt="">
+                <Helper typeImg="1" nameImg="help.png"/>
               </div>
             </div>
             <a href="">
@@ -51,82 +51,49 @@
             Transactions
           </div>
         </div>
-        <div v-if="pageActive==1" class="swap">
-          <div class="texts">
-            <div class="column">
-              <h4>Exchange</h4>
-              <span>Trade tokens in an instant</span>
-            </div>
-            <SvgImport name="setting-2"/>
-          </div>
-          <div class="form_w">
-            <div class="input_w">
-              <input type="text" value="435342">
-              <div class="coin_select">
-                <img src="/icons/bnb.png" alt="">
-                <span>BNB</span>
-                <img src="/images/down.png" alt="">
-              </div>
-            </div>
-            <div class="change">
-              <img src="/images/Swipe.png" alt="">
-            </div>
-            <div class="input_w">
-              <input type="text" value="435342">
-              <div class="coin_select">
-                <img src="/icons/bsw.png" alt="">
-                <span>BSW</span>
-                <img src="/images/down.png" alt="">
-              </div>
-            </div>
-            <div class="btn">
-              <SvgImport name="card-tick"/>
-              <span>Unlock Wallet</span>
-            </div>
-          </div>
-        </div>
-        <div v-if="pageActive==2" class="liquidity">
-          <div class="wrap" >
-            <div class="texts">
-              <div class="column">
-                <h4>Liquidity</h4>
-                <span>Add liquidity to receive LP tokens</span>
-              </div>
-              <SvgImport name="setting-2"/>
-            </div>
-            <div class="btn">
-              <SvgImport name="money-send"/>
-              <span>Add Liquidity</span>
-            </div>
-          </div>
-          <div class="row">
-            <span>Your Liquidity</span>
-            <img src="/images/help-gray.png" alt="">
-          </div>
-          <div class="wallet">
-            Connect a wallet to view your liquidity.
-          </div>
-          <div class="desc">
-            Or, if you staked your LP tokens in a farm, unstake them to see them <br>here.
-          </div>
-        </div>
+
+        <Swap :pageActive="pageActive" />
+        <Liquidity :pageActive="pageActive" />
+        <Transaction :pageActive="pageActive" />
       </div>
     </div>
+    <SelectToken/>
+    <ConnectWallet ref="modal"/>
   </div>
+
 </template>
 
 <script>
-import SvgImport from '~/components/layout/SvgImport'
-
+import SvgImport from '~/components/layout/SvgImport';
+import Helper from '~/components/Helper';
+import ConnectWallet from '~/components/modals/ConnectWallet';
+import SelectToken from '~/components/modals/SelectToken';
+import Swap from '~/components/exchange/Swap';
+import Liquidity from '~/components/exchange/Liquidity';
+import Transaction from '~/components/exchange/Transaction';
 export default {
   props: {
-    h2: { type: String, default: "" },
-    about: { type: String, default: "" },
-    pageActive: { type: Number, default: 0 },
+    h2: {type: String, default: ""},
+    about: {type: String, default: ""},
+    pageActive: {type: String, default: 0},
+  },
+  data: function () {
+    return {
+
+    }
+  },
+  methods: {
+
   },
   name: "Support",
   components: {
     SvgImport,
+    Helper,
+    ConnectWallet,
+    SelectToken,
+    Swap,
+    Liquidity,
+    Transaction,
   }
 }
 

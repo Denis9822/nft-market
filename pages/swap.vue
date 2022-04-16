@@ -11,6 +11,7 @@
 <script>
 import SvgImport from '~/components/layout/SvgImport'
 import Exchange from '~/components/Exchange'
+
 export default {
   mounted() {
     this.$nuxt.$emit('active-page', 2);

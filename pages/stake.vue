@@ -10,15 +10,17 @@
                   Looking for a less resource-intensive alternative to mining? <br>Use your BSW tokens to earn more tokens, for Free.
                 </h2>
                 <h4>Learn how to start</h4>
+              <a href="">
                 <div class="add">
                   <span>Add project</span>
                   <img src="/images/plus.png" alt="">
                 </div>
+              </a>
                 <div class="stake_btn">
-                    <div class="btn active">
+                    <div @click="stakePage = 'bsw'" class="btn" :class="{'active':stakePage=='bsw'}">
                       Stake BSW
                     </div>
-                  <div class="btn">
+                  <div @click="stakePage = 'tokens'" class="btn" :class="{'active':stakePage=='tokens'}">
                     Stake Tokens
                   </div>
                 </div>
@@ -43,26 +45,34 @@
         <div class="coins container">
           <div class="menu">
               <div class="links">
-                <a href="" class="active">Active</a>
-                <a href="" class="">Inactive</a>
+                <span @click="typeActive = 'active'" :class="{active:typeActive == 'active'}">Active</span>
+                <span @click="typeActive = 'inactive'" :class="{active:typeActive == 'inactive'}">Inactive</span>
               </div>
               <div class="staked">
-                  <div class="btn">
-                    <img class="stake-ellipse" src="/images/stake-ellipse.png" alt="">
-                    <img class="stake-row" src="/images/stake-row.png" alt="">
-                  </div>
-                  <span>Staked only</span>
+                <div @click="staked = !staked" class="btn" :class="{'stake-ellipse-true':staked}">
+                  <img class="stake-ellipse" src="/images/stake-ellipse.png" alt="">
+                  <img class="stake-row" src="/images/stake-row.png" alt="">
+                </div>
+                <span>Staked only</span>
               </div>
-              <div class="search">
-                  <div class="select_wrap">
-                      <span>All</span>
-                      <SvgImport name="Down"/>
-                  </div>
-                  <div class="input_wrap">
-                    <SvgImport name="search-normal"/>
-                    <input type="text" placeholder="Search launchpool">
-                  </div>
+            <div class="search">
+              <div class="input_wrap">
+                <SvgImport name="search-normal"/>
+                <input type="text" placeholder="Search farms">
               </div>
+              <div class="select_wrap">
+                <div @click="selectActive = !selectActive" class="click" >
+                  <span>{{ selectData }}</span>
+                  <SvgImport name="Down"/>
+                </div>
+                <div class="hidden" :class="{'hide':selectActive==false}">
+                  <span @click="selectData='All'">All</span>
+                  <span @click="selectData='Liquidity'">Liquidity</span>
+                  <span @click="selectData='Apr'" >Apr</span>
+                  <span @click="selectData='Stable'" >Stable</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="launch_wrap">
               <div class="item">
@@ -74,7 +84,7 @@
                     <div class="column">
                         <div class="d_flex">
                           <span>Holder Pool</span>
-                          <img src="/images/farms-help.png" alt="">
+                          <Helper typeImg="1" nameImg="farms-help.png" />
                         </div>
                         <p>Stake BSW - Ern BSW</p>
                         <span>+ participate in exclusive offers</span>
@@ -99,13 +109,13 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Auto Compound</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p class="mt">Stake BSW - Ern BSW</p>
                   <h6> <c> APY </c>  69.96%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -123,13 +133,13 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Earn BSW</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p class="mt">Stake BSW</p>
                   <h6> <c> APY </c>  53.03%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -165,7 +175,7 @@
                   <h6> <c> APR </c>  80.15%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -186,14 +196,14 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Earn WBNB</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p>Stake BSW - Ern BSW</p>
                   <div class="w">
                     <div class="req">
                       Requirments
                     </div>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                     <div class="hp">
                       200 BSW in HP
                     </div>
@@ -201,7 +211,7 @@
                   <h6> <c> APR </c>  69.65%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -222,14 +232,14 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Earn BTCB</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p>Stake BSW - Ern BSW</p>
                   <div class="w">
                     <div class="req">
                       Requirments
                     </div>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                     <div class="hp">
                       200 BSW in HP
                     </div>
@@ -237,7 +247,7 @@
                   <h6> <c> APR </c>  76.73%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -255,13 +265,13 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Earn bMVL</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p class="mt">Stake BSW - Ern BSW</p>
                   <h6> <c> APY </c>  84.81%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -279,13 +289,13 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Earn GQ</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p class="mt">Stake BSW - Ern BSW</p>
                   <h6> <c> APY </c>  81.09%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -303,13 +313,13 @@
                 <div class="column">
                   <div class="d_flex">
                     <span>Earn LOA</span>
-                    <img src="/images/farms-help.png" alt="">
+                    <Helper typeImg="1" nameImg="farms-help.png" />
                   </div>
                   <p class="mt">Stake BSW - Ern BSW</p>
                   <h6> <c> APY </c>  40.40%</h6>
                 </div>
               </div>
-              <div class="btn_unlock">
+              <div @click="showModalWallet" class="btn_unlock">
                 <SvgImport name="card-tick"/>
                 <span>Unlock Wallet</span>
               </div>
@@ -382,13 +392,29 @@
 <script>
 import SvgImport from '~/components/layout/SvgImport'
 import Exchange from '~/components/Exchange'
+import Helper from '~/components/Helper';
 export default {
   mounted() {
     this.$nuxt.$emit('active-page', 5);
   },
+  methods: {
+    showModalWallet(){
+      this.$nuxt.$emit('showModalConnectWallet');
+    }
+  },
+  data: function () {
+    return {
+      stakePage:"bsw",
+      typeActive:'active',
+      staked:false,
+      selectActive: false,
+      selectData: 'All',
+    }
+  },
   components:{
     SvgImport,
     Exchange,
+    Helper,
   }
 }
 </script>
