@@ -125,7 +125,7 @@
   <div class="container">
     <div class="slider_lets-go">
         <div class="slider_wrap">
-          <carousel perPage="3" paginationPadding="5" navigationEnabled="true">
+          <carousel v-if="!loading" perPage="3" paginationPadding="5" navigationEnabled="true">
             <slide>
               <div class="slider_item si1">
                 <div class="wrap">
@@ -575,7 +575,7 @@
               <div class="slider">
                   <div class="slider_bg"></div>
                 <div class="slider_wrap">
-                    <carousel perPage="3" paginationEnabled="false" navigationEnabled="false">
+                    <carousel v-if="!loading" perPage="3" paginationEnabled="false" navigationEnabled="false">
                       <slide>
                         <div class="slider_item">
                           <img src="/images/review-slide1.svg" alt="">
@@ -781,8 +781,16 @@ import Helper from '~/components/Helper';
 import SelectToken from '~/components/modals/SelectToken';
 
 export default {
+  data: () => ({
+    loading: true
+  }),
   mounted() {
     this.$nuxt.$emit('active-page', 1);
+  },
+  created() {
+    this.$nextTick(function() {
+      this.loading = false
+    })
   },
   components:{
     SvgImport,
