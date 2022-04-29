@@ -7622,4 +7622,8 @@ footer {
   .slider_lets-go .slider_wrap .slider_item{
     position: relative;
   }
+  .VueCarousel-inner{
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+  }
 }
