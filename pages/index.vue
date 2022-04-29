@@ -1,5 +1,6 @@
 <template>
   <div>
+    <client-only>
   <div class="main_section">
       <div class="main-bg pc-mob"></div>
       <div class="container">
@@ -975,7 +976,9 @@
 
   </div>
     <SelectToken />
+    </client-only>
   </div>
+
 </template>
 
 <script>
