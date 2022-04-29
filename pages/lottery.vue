@@ -410,49 +410,17 @@ export default {
       hours: 'TH',
       minutes: 'ER',
       seconds: 'E!',
-      expired: false
+      expired: false,
+      theTime:{
+        days: 1,
+        hours: 10,
+        minutes: 25,
+        seconds: 56
+      }
     };
   },
   computed: {
-    theTime() {
-      var ctx = this;
 
-// Цикл обратного отсчета
-      var x = setInterval(function () {
-
-//Разница между двумя датами
-        var countDownDate = new Date(ctx.deadline).getTime(),
-          now = new Date().getTime(),
-          diff = countDownDate - now,
-
-// Преобразование времени в дни, часы, минуты и секунды
-          tdays = Math.floor(diff / (1000 * 60 * 60 * 24)),
-          thours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          tminutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-          tseconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-// Отображать две цифры
-        ctx.days = (tdays < 10) ? '0' + tdays : tdays;
-        ctx.hours = (thours < 10) ? '0' + thours : thours;
-        ctx.minutes = (tminutes < 10) ? '0' + tminutes : tminutes;
-        ctx.seconds = (tseconds < 10) ? '0' + tseconds : tseconds;
-
-// Проверка истечения времени
-        if (diff < 0) {
-          clearInterval(x);
-          ctx.expired = true;
-        }
-      }, 1000);
-
-// Возвращение данных
-
-      return {
-        days: ctx.days,
-        hours: ctx.hours,
-        minutes: ctx.minutes,
-        seconds: ctx.seconds
-      };
-    }
   },
   mounted() {
     this.$nuxt.$emit('active-page', 8);
@@ -461,6 +429,7 @@ export default {
     showModalWallet(){
       this.$nuxt.$emit('showModalConnectWallet');
     }
+
   },
   components:{
     SvgImport,
