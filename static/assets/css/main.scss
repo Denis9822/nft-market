@@ -327,7 +327,6 @@ input[type=number] {
       font-style: normal;
       font-weight: 600;
       font-size: 1rem;
-      line-height: 24px;
     }
 
     svg {
@@ -6366,7 +6365,7 @@ footer {
   }
   .sidebar, .sidebar_w {
     position: fixed;
-    z-index: 1111;
+    z-index: 1111111;
   }
   .sidebar_menu {
     .header_market {
