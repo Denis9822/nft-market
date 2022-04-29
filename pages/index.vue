@@ -122,8 +122,6 @@
           </div>
       </div>
   </div>
-  <div class="container">
-
     <div class="why">
       <div class="container">
         <div class="title">
@@ -211,6 +209,9 @@
         </div>
       </div>
     </div>
+  <div class="container">
+
+
     <div class="earn_launchpools">
         <div class="d_flex">
             <div class="title_w">
