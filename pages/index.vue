@@ -1,6 +1,9 @@
 <template>
   <div>
+  <div class="main_section">
+      <div class="main-bg pc-mob"></div>
 
+  </div>
   <div class="container">
     <div class="slider_lets-go pc-mob ">
         <div class="slider_wrap">
