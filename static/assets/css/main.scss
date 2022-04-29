@@ -818,6 +818,7 @@ header {
     position: relative;
 
     .slider_item {
+      position: relative;
       margin-right: 20px;
       margin-left: 20px;
       height: 160px;
@@ -7608,5 +7609,8 @@ footer {
     line-height: 0;
     position: relative;
     top: 0.8px;
+  }
+  .VueCarousel-slide-active {
+    transform: rotateY(0);
   }
 }
