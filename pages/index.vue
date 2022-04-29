@@ -213,7 +213,7 @@
     </div>
     <div class="slider_lets-go mob">
       <div class="slider_wrap">
-        <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" >
+        <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" :paginationEnabled="false" :navigationEnabled="false">
           <slide>
             <div class="slider_item si1">
               1
