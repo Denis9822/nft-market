@@ -567,7 +567,9 @@ header {
   align-items: center;
   margin-top: 16px;
 }
-
+.slick-slider{
+  width: 200px;
+}
 .btn-green {
   display: flex;
   justify-content: center;
@@ -7610,20 +7612,5 @@ footer {
     position: relative;
     top: 0.8px;
   }
-  .main_section{
-    position: relative;
-  }
-  .slider_lets-go{
-    position: relative;
-  }
-  .VueCarousel-wrapper{
-    position: relative;
-  }
-  .slider_lets-go .slider_wrap .slider_item{
-    position: relative;
-  }
-  .VueCarousel-inner{
-    -webkit-perspective: 1000;
-    -webkit-backface-visibility: hidden;
-  }
+
 }

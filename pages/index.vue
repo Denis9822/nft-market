@@ -212,6 +212,14 @@
           </carousel>
         </div>
     </div>
+    <client-only>
+    <VueSlickCarousel :arrows="true" :dots="true">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </VueSlickCarousel>
+    </client-only>
     <div class="slider_lets-go mob">
       <div class="slider_wrap">
         <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" :navigationEnabled="true">
@@ -985,7 +993,10 @@
 import SvgImport from '~/components/layout/SvgImport';
 import Helper from '~/components/Helper';
 import SelectToken from '~/components/modals/SelectToken';
-
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
   data: () => ({
@@ -1009,6 +1020,7 @@ export default {
     SvgImport,
     Helper,
     SelectToken,
+    VueSlickCarousel,
   }
 }
 </script>
