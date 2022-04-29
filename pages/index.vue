@@ -215,17 +215,17 @@
       <div class="slider_wrap">
         <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" :paginationEnabled="false" :navigationEnabled="false">
           <slide>
-            <div class="slider_item si1">
+            <div class="s">
               1
             </div>
           </slide>
           <slide>
-            <div class="slider_item si2">
+            <div class="s">
                 2
             </div>
           </slide>
           <slide>
-            <div class="slider_item si3">
+            <div class="s">
 3
             </div>
           </slide>
