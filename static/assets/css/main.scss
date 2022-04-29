@@ -6511,6 +6511,9 @@ footer {
     margin-left: 0px;
     background: none;
     display: block;
+    .wrap{
+      display: none;
+    }
     img{
       display: none;
     }
