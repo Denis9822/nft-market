@@ -1,7 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  mode: 'spa',
-  target: 'static',
+
   head: {
     title: 'nft_platform',
     htmlAttrs: {
