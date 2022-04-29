@@ -6826,7 +6826,7 @@ footer {
   }
   .connect_wallet {
     width: 98vw;
-    top: 10vh;
+    top: 3vh;
     transform: translate(-50%);
     overflow: scroll;
     .wrap .item {
@@ -7598,5 +7598,9 @@ footer {
     width: 283px;
     height: 293px;
     background-size: contain;
+  }
+  .reviews .slider_wrap .slider_item .read svg{
+    position: relative;
+    bottom: 3px;
   }
 }
