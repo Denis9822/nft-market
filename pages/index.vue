@@ -735,7 +735,7 @@
             <div class="slider mob">
               <div class="slider_bg"></div>
               <div class="slider_wrap">
-                <carousel v-if="!loading" :perPage="1" :paginationEnabled="false" :navigationEnabled="false" :loop="true" :autoplay="true">
+                <carousel v-if="!loading" :perPage="1" :paginationEnabled="false" :navigationEnabled="false">
                   <slide>
                     <div class="slider_item">
                       <img src="/images/review-slide1.svg" alt="">
