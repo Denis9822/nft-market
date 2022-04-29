@@ -6916,7 +6916,7 @@ footer {
     padding-left: 0;
   }
   .farms .bg_w .coins .coin_wrap .row {
-    grid-template-columns: 1.5fr 1fr 1fr 1.1fr 1.1fr;
+    grid-template-columns: 2.5fr 1fr 1fr 1.1fr 1.1fr;
   }
   .farms .bg_w .launch .bg-green, .launchpool .bg_w .launch .bg-green, .ido .bg_w .launch .bg-green, .refferal .bg_w .launch .bg-green, .lottery .bg_w .launch .bg-green {
     display: none;
@@ -7031,6 +7031,7 @@ footer {
   .ido .bg_w .ido_lists .list .about .links {
     grid-column: 1;
     grid-row: 4;
+    width: 100%;
   }
   .ido .bg_w .ido_lists .list .about .links a span {
     padding-left: 0;
@@ -7602,5 +7603,10 @@ footer {
   .reviews .slider_wrap .slider_item .read svg{
     position: relative;
     bottom: 3px;
+  }
+  .ido .bg_w .ido_lists .list .option .top .about .btn span{
+    line-height: 0;
+    position: relative;
+    top: 0.8px;
   }
 }
