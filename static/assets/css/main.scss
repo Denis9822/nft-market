@@ -1446,10 +1446,7 @@ header {
           font-size: 0.857rem;
           line-height: 18px;
           background: linear-gradient(180deg, #2FBB99 0%, #00FFA3 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
+          color: #00FFA3;
           margin-right: 8px;
           display: flex;
         }
@@ -5412,6 +5409,7 @@ footer {
   transform: translate(-50%,-50%);
   z-index: 11111111;
   padding: 40px 20px;
+  overflow: auto;
 
   .title{
     display: flex;
@@ -6829,8 +6827,8 @@ footer {
   }
   .connect_wallet {
     width: 98vw;
-    top: 40%;
-    transform: translate(-50%,-40%);
+    top: 60%;
+    transform: translate(-50%,-60%);
     .wrap .item {
       width: 48%;
     }
