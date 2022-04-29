@@ -3,55 +3,7 @@
   <div class="main_section">
       <div class="main-bg pc-mob"></div>
       <div class="container">
-          <div class="d-flex main_block">
-            <div class="wrap main_block1">
-              <div class="main_block_row">
-                <h1>The First DEX on BNB Chain with <br> a three-type referral system</h1>
-                <span>Enjoy profitable yield farming and exchanging with the lowest fees <br>  in DeFi space!</span>
-              </div>
-              <a class="a-gr" href="">
-               <div class="btn-green">
-                  <SvgImport name="vuesax/bold/dollar-circle"/>
-                  <span>Trade Now</span>
-              </div>
-              </a>
-              <div class="main_section_plus">
-                  <div class="main_section_plus_item">
-                    <SvgImport name="discount-shape"/>
-                    <div class="row">
-                      <span>The Lowest Trade Fee in <br>the DeFi Space</span>
-                      <p>0.1%</p>
-                    </div>
-                  </div>
-                <div class="main_section_plus_item main_section_plus_item--style-red">
-                  <SvgImport name="empty-wallet-change"/>
-                  <div class="row">
-                    <span>Exchange Fee <br>Reimbursement</span>
-                    <p>up to 90%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="wrap main_block2">
-                <div class="trading_values">
-                      <div class="d-flex">
-                          <div class="item">
-                            <SvgImport name="binance"/>
-                            <div class="wrap">
-                                <span>Total value locked</span>
-                                <p>$574 721 205</p>
-                            </div>
-                          </div>
-                        <div class="item">
-                          <div class="wrap">
-                            <span>Total trading Volume</span>
-                            <p>$38 179 465 697</p>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-          </div>
+
           <div class="currency_lists">
             <div class="currency_item">
                 <img src="/images/coins/fil.svg" alt="">
