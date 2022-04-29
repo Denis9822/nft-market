@@ -6511,7 +6511,9 @@ footer {
     margin-left: 0px;
     background: none;
     display: block;
-
+    .wrap{
+      display: none;
+    }
     .slider_img {
       width: 95px;
     }
