@@ -6827,8 +6827,9 @@ footer {
   }
   .connect_wallet {
     width: 98vw;
-    top: 55vh;
-    transform: none;
+    top: 10vh;
+    transform: translate(-50%);
+    overflow: scroll;
     .wrap .item {
       width: 48%;
     }
