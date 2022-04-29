@@ -213,7 +213,7 @@
     </div>
     <div class="slider_lets-go mob">
       <div class="slider_wrap">
-        <carousel v-if="!loading" perPage="1" autoplay="true" loop="true" paginationPadding="5" navigationEnabled="true">
+        <carousel v-if="!loading" perPage="1" paginationPadding="5" navigationEnabled="true">
           <slide>
             <div class="slider_item si1">
               <div class="wrap">
