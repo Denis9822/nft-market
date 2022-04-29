@@ -290,6 +290,8 @@ input[type=number] {
 .sidebar_menu_item {
   margin-top: 12px;
   padding: 9px 10px;
+  height: 100%;
+  align-items: center;
 
   &.sidebar_menu_item--style_yellow {
     span {
