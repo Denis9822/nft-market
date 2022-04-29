@@ -216,86 +216,20 @@
         <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" >
           <slide>
             <div class="slider_item si1">
-              <div class="wrap">
-                <p>Use CyberDex <br> on mobile phone</p>
-                <span>Search for nft right in <br> your phone</span>
-                <a href="">
-                  <div class="btn-lets-go">
-                    Let’s go!
-                  </div>
-                </a>
-              </div>
-              <img class="slider_img" src="/images/nft_1.png" alt="">
+              1
             </div>
           </slide>
           <slide>
             <div class="slider_item si2">
-              <div class="wrap">
-                <p>NFT prizes for new <br> users</p>
-                <span>Discover new NFTs at <br>the CyberDex project</span>
-                <a href="">
-                  <div class="btn-lets-go">
-                    Let’s go!
-                  </div>
-                </a>
-              </div>
-              <img class="slider_img" src="/images/nft_2.png" alt="">
+                2
             </div>
           </slide>
           <slide>
             <div class="slider_item si3">
-              <div class="wrap">
-                <p>Buy NFT and enter the <br>top buyers</p>
-                <span>Our platform is designed for <br>this condition</span>
-                <a href="">
-                  <div class="btn-lets-go">
-                    Let’s go!
-                  </div>
-                </a>
-              </div>
+3
             </div>
           </slide>
-          <slide>
-            <div class="slider_item si1">
-              <div class="wrap">
-                <p>Use CyberDex <br> on mobile phone</p>
-                <span>Search for nft right in <br> your phone</span>
-                <a href="">
-                  <div class="btn-lets-go">
-                    Let’s go!
-                  </div>
-                </a>
-              </div>
-              <img class="slider_img" src="/images/nft_1.png" alt="">
-            </div>
-          </slide>
-          <slide>
-            <div class="slider_item si2">
-              <div class="wrap">
-                <p>NFT prizes for new <br> users</p>
-                <span>Discover new NFTs at <br>the CyberDex project</span>
-                <a href="">
-                  <div class="btn-lets-go">
-                    Let’s go!
-                  </div>
-                </a>
-              </div>
-              <img class="slider_img" src="/images/nft_2.png" alt="">
-            </div>
-          </slide>
-          <slide>
-            <div class="slider_item si3">
-              <div class="wrap">
-                <p>Buy NFT and enter the <br>top buyers</p>
-                <span>Our platform is designed for <br>this condition</span>
-                <a href="">
-                  <div class="btn-lets-go">
-                    Let’s go!
-                  </div>
-                </a>
-              </div>
-            </div>
-          </slide>
+
         </carousel>
       </div>
     </div>
