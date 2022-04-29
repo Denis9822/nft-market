@@ -1,10 +1,10 @@
 <template>
   <div>
   <div class="main_section">
-      <div class="main-bg"></div>
+      <div class="main-bg pc-mob"></div>
       <div class="container">
           <div class="d-flex main_block">
-            <div class="wrap">
+            <div class="wrap main_block1">
               <div class="main_block_row">
                 <h1>The First DEX on BNB Chain with <br> a three-type referral system</h1>
                 <span>Enjoy profitable yield farming and exchanging with the lowest fees <br>  in DeFi space!</span>
@@ -113,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="currency_all">
+            <div class="currency_all pc-mob">
               <a href="">
                 <span>All Markets</span>
                 <img src="/images/right.png" alt="">
@@ -123,7 +123,7 @@
       </div>
   </div>
   <div class="container">
-    <div class="slider_lets-go">
+    <div class="slider_lets-go pc-mob ">
         <div class="slider_wrap">
           <carousel v-if="!loading" perPage="3" paginationPadding="5" navigationEnabled="true">
             <slide>
@@ -211,7 +211,94 @@
           </carousel>
         </div>
     </div>
-
+    <div class="slider_lets-go mob">
+      <div class="slider_wrap">
+        <carousel v-if="!loading" perPage="1" autoplay="true" loop="true" paginationPadding="5" navigationEnabled="true">
+          <slide>
+            <div class="slider_item si1">
+              <div class="wrap">
+                <p>Use CyberDex <br> on mobile phone</p>
+                <span>Search for nft right in <br> your phone</span>
+                <a href="">
+                  <div class="btn-lets-go">
+                    Let’s go!
+                  </div>
+                </a>
+              </div>
+              <img class="slider_img" src="/images/nft_1.png" alt="">
+            </div>
+          </slide>
+          <slide>
+            <div class="slider_item si2">
+              <div class="wrap">
+                <p>NFT prizes for new <br> users</p>
+                <span>Discover new NFTs at <br>the CyberDex project</span>
+                <a href="">
+                  <div class="btn-lets-go">
+                    Let’s go!
+                  </div>
+                </a>
+              </div>
+              <img class="slider_img" src="/images/nft_2.png" alt="">
+            </div>
+          </slide>
+          <slide>
+            <div class="slider_item si3">
+              <div class="wrap">
+                <p>Buy NFT and enter the <br>top buyers</p>
+                <span>Our platform is designed for <br>this condition</span>
+                <a href="">
+                  <div class="btn-lets-go">
+                    Let’s go!
+                  </div>
+                </a>
+              </div>
+            </div>
+          </slide>
+          <slide>
+            <div class="slider_item si1">
+              <div class="wrap">
+                <p>Use CyberDex <br> on mobile phone</p>
+                <span>Search for nft right in <br> your phone</span>
+                <a href="">
+                  <div class="btn-lets-go">
+                    Let’s go!
+                  </div>
+                </a>
+              </div>
+              <img class="slider_img" src="/images/nft_1.png" alt="">
+            </div>
+          </slide>
+          <slide>
+            <div class="slider_item si2">
+              <div class="wrap">
+                <p>NFT prizes for new <br> users</p>
+                <span>Discover new NFTs at <br>the CyberDex project</span>
+                <a href="">
+                  <div class="btn-lets-go">
+                    Let’s go!
+                  </div>
+                </a>
+              </div>
+              <img class="slider_img" src="/images/nft_2.png" alt="">
+            </div>
+          </slide>
+          <slide>
+            <div class="slider_item si3">
+              <div class="wrap">
+                <p>Buy NFT and enter the <br>top buyers</p>
+                <span>Our platform is designed for <br>this condition</span>
+                <a href="">
+                  <div class="btn-lets-go">
+                    Let’s go!
+                  </div>
+                </a>
+              </div>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
     <div class="earn_launchpools">
         <div class="d_flex">
             <div class="title_w">
@@ -494,7 +581,45 @@
     </div>
     <div class="benefits">
         <div class="title">Our Benefits</div>
-        <div class="wrap">
+        <div class="slider_benefits mob">
+          <div class="slider_wrap">
+            <carousel v-if="!loading" perPage="1" paginationPadding="5" navigationEnabled="true">
+              <slide>
+                <div class="slider_item">
+                    <img src="/images/benefits1.svg" alt="">
+                    <span>3-type Referral System</span>
+                    <p>Invite your friends and earn a <br> certain commision reverd every
+                      time they make a swap on Biswap <br> and 5% from their Income in Farms <br> & Launchpools.</p>
+                </div>
+              </slide>
+              <slide>
+                <div class="slider_item">
+                  <img src="/images/benefits2.svg" alt="">
+                  <span>The Lowest Exchange Fee</span>
+                  <p>Safely buy and sell your <br> cryptocurrency with the lowest <br> exchange fee in the DeFi space</p>
+                </div>
+              </slide>
+              <slide>
+                <div class="slider_item">
+                  <img src="/images/benefits3.svg" alt="">
+                  <span>Trade Fee Reimbursement</span>
+                  <p>Make a swap on a Biswap at no cost. <br> Up to 90% of the trading fee <br>
+                    returned in BSW tokens.</p>
+                </div>
+              </slide>
+              <slide>
+                <div class="slider_item">
+                  <img src="/images/benefits4.svg" alt="">
+                  <span>Competitions</span>
+                  <p>Participate in the regular Beswap <br>
+                    trading competitions and win <br>
+                    exclusive prizes.</p>
+                </div>
+              </slide>
+            </carousel>
+          </div>
+        </div>
+        <div class="wrap pc-mob">
             <div class="item">
               <img src="/images/benefits1.svg" alt="">
               <span>3-type Referral System</span>
@@ -572,7 +697,7 @@
                   </div>
               </div>
 
-              <div class="slider">
+            <div class="slider pc-mob">
                   <div class="slider_bg"></div>
                 <div class="slider_wrap">
                     <carousel v-if="!loading" perPage="3" paginationEnabled="false" navigationEnabled="false">
@@ -647,6 +772,81 @@
                      </carousel>
                   </div>
               </div>
+            <div class="slider mob">
+              <div class="slider_bg"></div>
+              <div class="slider_wrap">
+                <carousel v-if="!loading" perPage="1" paginationEnabled="false" navigationEnabled="false" loop="true" autoplay="true">
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/review-slide1.svg" alt="">
+                      <span>Biswap passes the 1 billion <br> transactions millestone and is listed <br>
+                              amongst the top Des and BSC in a <br> more few months after its launch</span>
+                      <div class="read">
+                        <a href="">Read more</a>
+                        <SvgImport name="arrow-right-read"/>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/review-slide2.svg" alt="">
+                      <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br>  network.</span>
+                      <div class="read">
+                        <a href="">Read more</a>
+                        <SvgImport name="arrow-right-read"/>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/review-slide3.svg" alt="">
+                      <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br> network.</span>
+                      <div class="read">
+                        <a href="">Read more</a>
+                        <SvgImport name="arrow-right-read"/>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/review-slide1.svg" alt="">
+                      <span>Biswap passes the 1 billion <br> transactions millestone and is listed <br>
+                              amongst the top Des and BSC in a <br> more few months after its launch</span>
+                      <div class="read">
+                        <a href="">Read more</a>
+                        <SvgImport name="arrow-right-read"/>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/review-slide2.svg" alt="">
+                      <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br>  network.</span>
+                      <div class="read">
+                        <a href="">Read more</a>
+                        <SvgImport name="arrow-right-read"/>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/review-slide3.svg" alt="">
+                      <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br> network.</span>
+                      <div class="read">
+                        <a href="">Read more</a>
+                        <SvgImport name="arrow-right-read"/>
+                      </div>
+                      <div class="bg"></div>
+                    </div>
+                  </slide>
+                </carousel>
+              </div>
+            </div>
           </div>
           <div class="w">
             <div class="investor">
@@ -661,7 +861,7 @@
                     </a>
                 </div>
               <div class="img">
-                  <img src="/images/binanceLabs.png" alt="">
+                  <img src="/images/binanceLabs.svg" alt="">
               </div>
             </div>
             <div class="bg"></div>
@@ -672,100 +872,100 @@
               </div>
               <div class="wrap">
                   <div class="item">
-                    <img src="/images/partners/1.png" alt="">
+                    <img src="/images/partners/1.svg" alt="">
                   </div>
                 <div class="item">
-                  <img src="/images/partners/2.png" alt="">
+                  <img src="/images/partners/2.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/3.png" alt="">
+                  <img src="/images/partners/3.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/4.png" alt="">
+                  <img src="/images/partners/4.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/5.png" alt="">
+                  <img src="/images/partners/5.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/6.png" alt="">
+                  <img src="/images/partners/6.svg" alt="">
                 </div>
                 <div class="item gate">
-                  <img src="/images/partners/7.png" alt="">
+                  <img src="/images/partners/7.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/8.png" alt="">
+                  <img src="/images/partners/8.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/9.png" alt="">
+                  <img src="/images/partners/9.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/10.png" alt="">
+                  <img src="/images/partners/10.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/11.png" alt="">
+                  <img src="/images/partners/11.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/12.png" alt="">
+                  <img src="/images/partners/12.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/13.png" alt="">
+                  <img src="/images/partners/13.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/14.png" alt="">
+                  <img src="/images/partners/14.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/15.png" alt="">
+                  <img src="/images/partners/15.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/16.png" alt="">
+                  <img src="/images/partners/16.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/17.png" alt="">
+                  <img src="/images/partners/17.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/18.png" alt="">
+                  <img src="/images/partners/18.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/19.png" alt="">
+                  <img src="/images/partners/19.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/20.png" alt="">
+                  <img src="/images/partners/20.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/21.png" alt="">
+                  <img src="/images/partners/21.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/22.png" alt="">
+                  <img src="/images/partners/22.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/23.png" alt="">
+                  <img src="/images/partners/23.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/24.png" alt="">
+                  <img src="/images/partners/24.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/25.png" alt="">
+                  <img src="/images/partners/25.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/26.png" alt="">
+                  <img src="/images/partners/26.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/27.png" alt="">
+                  <img src="/images/partners/27.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/28.png" alt="">
+                  <img src="/images/partners/28.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/29.png" alt="">
+                  <img src="/images/partners/29.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/30.png" alt="">
+                  <img src="/images/partners/30.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/31.png" alt="">
+                  <img src="/images/partners/31.svg" alt="">
                 </div>
                 <div class="item">
-                  <img src="/images/partners/32.png" alt="">
+                  <img src="/images/partners/32.svg" alt="">
                 </div>
               </div>
           </div>
@@ -782,7 +982,8 @@ import SelectToken from '~/components/modals/SelectToken';
 
 export default {
   data: () => ({
-    loading: true
+    loading: true,
+
   }),
   mounted() {
     this.$nuxt.$emit('active-page', 1);

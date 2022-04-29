@@ -5,7 +5,19 @@
           <div class="bg-ellipse-green"></div>
           <div class="container">
             <div class="column">
+              <div class="wr">
                 <h1>Launchpools</h1>
+                <div @click="detailFarms = !detailFarms" class="details mob">
+                  <span>Details</span>
+                  <div class="" :class="{'hidden-mob':detailFarms == true}">
+                    <SvgImport name="details-arrow-up"/>
+                  </div>
+                  <div class="" :class="{'hidden-mob':detailFarms == false}" >
+                    <SvgImport name="details-arrow-down"/>
+                  </div>
+                </div>
+              </div>
+              <div class="block" :class="{'hidden-mob':detailFarms == true}" >
                 <h2>
                   Looking for a less resource-intensive alternative to mining? <br>Use your BSW tokens to earn more tokens, for Free.
                 </h2>
@@ -13,7 +25,7 @@
               <a href="">
                 <div class="add">
                   <span>Add project</span>
-                  <img src="/images/plus.png" alt="">
+                  <img src="/images/plus.svg" alt="">
                 </div>
               </a>
                 <div class="stake_btn">
@@ -24,8 +36,9 @@
                     Stake Tokens
                   </div>
                 </div>
+              </div>
             </div>
-            <div class="column cyberdex_stake">
+            <div class="column cyberdex_stake" :class="{'hidden-mob':detailFarms == true}" >
                 <div class="cyberdex">
                       <div class="d_flex">
                           <span>Use CyberDex <br>on mobile phone</span>
@@ -78,8 +91,8 @@
               <div class="item">
                 <div class="row">
                     <div class="imgs">
-                      <img class="full" src="/images/bsw-full.png" alt="">
-                      <img class="small" src="/images/bsw-green.png" alt="">
+                      <img class="full" src="/images/coins/bsw.svg" alt="">
+                      <img class="small" src="/images/coins/bsw-green.svg" alt="">
                     </div>
                     <div class="column">
                         <div class="d_flex">
@@ -103,8 +116,8 @@
               <div class="item">
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/bsw-full.png" alt="">
-                  <img class="small" src="/images/reload.png" alt="">
+                  <img class="full" src="/images/coins/bsw.svg" alt="">
+                  <img class="small" src="/images/reload.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -127,8 +140,8 @@
               <div class="item">
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/bsw-full.png" alt="">
-                  <img class="small" src="/images/bsw-green.png" alt="">
+                  <img class="full" src="/images/coins/bsw.svg" alt="">
+                  <img class="small" src="/images/coins/bsw-green.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -154,8 +167,8 @@
               </div>
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/eth 3.png" alt="">
-                  <img class="small" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/coins/eth.svg" alt="">
+                  <img class="small" src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -190,8 +203,8 @@
               </div>
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/bnb.png" alt="">
-                  <img class="small" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/coins/bnb.svg" alt="">
+                  <img class="small" src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -226,8 +239,8 @@
               </div>
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/bnb.png" alt="">
-                  <img class="small" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/coins/bnb.svg" alt="">
+                  <img class="small" src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -259,8 +272,8 @@
             <div class="item">
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/bmvl 1.png" alt="">
-                  <img class="small" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/coins/bmvl.svg" alt="">
+                  <img class="small" src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -284,7 +297,7 @@
               <div class="row">
                 <div class="imgs">
                   <img class="full" src="/images/gq 2.png" alt="">
-                  <img class="small" src="/icons/bsw-full.png" alt="">
+                  <img class="small" src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -307,8 +320,8 @@
             <div class="item">
               <div class="row">
                 <div class="imgs">
-                  <img class="full" src="/images/loa 1.png" alt="">
-                  <img class="small" src="/icons/bsw-full.png" alt="">
+                  <img class="full" src="/images/coins/loa.svg" alt="">
+                  <img class="small" src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="column">
                   <div class="d_flex">
@@ -347,43 +360,91 @@
            </div>
          </div>
         <div class="why">
-            <div class="container">
-                <div class="title">
-                  Why choose us?
-                </div>
-               <div class="why_w">
-                  <div class="wrap">
-                    <img src="/images/why1.png" alt="">
-                    <h3>Global Exposure</h3>
-                    <span>Get access to 380k+ Biswap users <br>across the globe.</span>
-                  </div>
-                  <div class="wrap">
-                    <img src="/images/why2.png" alt="">
-                    <h3>Liquidity</h3>
-                    <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
-                  </div>
-                <div class="wrap">
-                  <img src="/images/why3.png" alt="">
-                  <h3>Token Distribution</h3>
-                  <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
-                </div>
-                <div class="wrap">
-                  <img src="/images/why4.png" alt="">
-                  <h3>Trading Competition</h3>
-                  <span>Biswap will organize a tournament <br>dedicated to your project to maximize <br>trading volume with your token.</span>
-                </div>
-                <div class="wrap">
-                  <img src="/images/why5.png" alt="">
-                  <h3>Marketing Boost</h3>
-                  <span>Your project will be promoted across all <br>our social media platforms with an <br>audience of over 320K+.</span>
-                </div>
-                <div class="wrap">
-                  <img src="/images/why6.png" alt="">
-                  <h3>Marketing Boost</h3>
-                  <span>Your token might also be added to <br>Biswap Farms with high APR.</span>
-                </div>
+          <div class="container">
+            <div class="title">
+              Why choose us?
+            </div>
+            <div class="slider mob">
+              <div class="slider_wrap">
+                <carousel v-if="!loading" perPage="1" paginationEnabled="false" loop="true" navigationEnabled="false" autoplay="true">
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/why1.svg" alt="">
+                      <h3>Global Exposure</h3>
+                      <span>Get access to 380k+ Biswap users <br>across the globe.</span>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/why2.svg" alt="">
+                      <h3>Liquidity</h3>
+                      <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/why3.svg" alt="">
+                      <h3>Token Distribution</h3>
+                      <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/why4.svg" alt="">
+                      <h3>Trading Competition</h3>
+                      <span>Biswap will organize a tournament <br>dedicated to your project to maximize <br>trading volume with your token.</span>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/why5.svg" alt="">
+                      <h3>Marketing Boost</h3>
+                      <span>Your project will be promoted across all <br>our social media platforms with an <br>audience of over 320K+.</span>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="slider_item">
+                      <img src="/images/why6.svg" alt="">
+                      <h3>Marketing Boost</h3>
+                      <span>Your token might also be added to <br>Biswap Farms with high APR.</span>
+                    </div>
+                  </slide>
+                </carousel>
               </div>
             </div>
+            <div class="why_w pc-mob">
+              <div class="wrap">
+                <img src="/images/why1.svg" alt="">
+                <h3>Global Exposure</h3>
+                <span>Get access to 380k+ Biswap users <br>across the globe.</span>
+              </div>
+              <div class="wrap">
+                <img src="/images/why2.svg" alt="">
+                <h3>Liquidity</h3>
+                <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
+              </div>
+              <div class="wrap">
+                <img src="/images/why3.svg" alt="">
+                <h3>Token Distribution</h3>
+                <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
+              </div>
+              <div class="wrap">
+                <img src="/images/why4.svg" alt="">
+                <h3>Trading Competition</h3>
+                <span>Biswap will organize a tournament <br>dedicated to your project to maximize <br>trading volume with your token.</span>
+              </div>
+              <div class="wrap">
+                <img src="/images/why5.svg" alt="">
+                <h3>Marketing Boost</h3>
+                <span>Your project will be promoted across all <br>our social media platforms with an <br>audience of over 320K+.</span>
+              </div>
+              <div class="wrap">
+                <img src="/images/why6.svg" alt="">
+                <h3>Marketing Boost</h3>
+                <span>Your token might also be added to <br>Biswap Farms with high APR.</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
   </div>
@@ -409,6 +470,7 @@ export default {
       staked:false,
       selectActive: false,
       selectData: 'All',
+      detailFarms:true,
     }
   },
   components:{

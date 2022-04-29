@@ -3,6 +3,8 @@
     <Preloader/>
     <SidebarComponent/>
     <div class="wrap">
+      <div class="header_bg_red mob"></div>
+      <div class="header_bg_green mob"></div>
       <HeaderComponent />
        <Support/>
       <nuxt/>

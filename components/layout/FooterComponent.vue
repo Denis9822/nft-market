@@ -6,7 +6,7 @@
               <div class="stats">
                       <div class="coin">
                           <div class="row">
-                              <img src="/icons/bsw-full.png" alt="">
+                              <img src="/images/coins/bsw.svg" alt="">
                             <div class="column">
                                 <span>BSW</span>
                                 <p>$0.691</p>
@@ -14,7 +14,7 @@
                           </div>
                           <div class="row">
                             <div class="meta">
-                              <img src="/images/metamask.png" alt="">
+                              <img src="/images/meta.svg" alt="">
                             </div>
                             <a href="">
                               <div class="btn_buy">
@@ -47,50 +47,76 @@
                     </div>
               </div>
               <div class="menu">
-                  <div class="column">
-                    <span>About</span>
+                  <div class="column" :class="{'links':statusShowItem[1] == true}">
+                    <div class="wr">
+                      <span>About</span>
+                      <div class="mlauto" @click="showItem(1)" :class="{'hidden':statusShowItem[1] == false || statusShowItem[1] == undefined}">
+                      <SvgImport name="minus"/>
+                      </div>
+                      <div class="mlauto" @click="showItem(1)" :class="{'hidden':statusShowItem[1] == true}" >
+                      <SvgImport name="plus"/>
+                      </div>
+                    </div>
                     <a href="">Docs</a>
                     <a href="">Team</a>
                     <a href="">News</a>
                     <a href="">Github</a>
                     <a href="">Bug Bounty</a>
                   </div>
-                <div class="column">
-                  <span>Products</span>
+                <div class="column" :class="{'links':statusShowItem[2] == true}" >
+                  <div class="wr">
+                    <span>Products</span>
+                    <div class="mlauto" @click="showItem(2)" :class="{'hidden':statusShowItem[2] == false || statusShowItem[2] == undefined}">
+                      <SvgImport name="minus"/>
+                    </div>
+                    <div class="mlauto" @click="showItem(2)" :class="{'hidden':statusShowItem[2] == true}" >
+                      <SvgImport name="plus"/>
+                    </div>
+                  </div>
                   <a href="">Exchange</a>
                   <a href="">Liquidity</a>
                   <a href="">Farms</a>
                   <a href="">Launchpools</a>
                   <a href="">Analytics</a>
                 </div>
-                <div class="column">
-                  <span>Service</span>
+                <div class="column" :class="{'links':statusShowItem[3] == true}">
+                  <div class="wr">
+                    <span>Service</span>
+                    <div class="mlauto" @click="showItem(3)" :class="{'hidden':statusShowItem[3] == false || statusShowItem[3] == undefined}">
+                      <SvgImport name="minus"/>
+                    </div>
+                    <div class="mlauto" @click="showItem(3)" :class="{'hidden':statusShowItem[3] == true}" >
+                      <SvgImport name="plus"/>
+                    </div>
+                  </div>
                   <a href="">Referral program</a>
                   <a href="">ESW Token</a>
                   <a href="">Apply to Launch</a>
                   <a href="">$10M Program</a>
                 </div>
                 <div class="column">
-                  <span>Community</span>
+                  <div class="wr">
+                    <span>Community</span>
+                  </div>
                   <div class="social">
                       <div class="item">
                         <a href="">
-                        <img src="/images/telegram.png" alt="">
+                        <img src="/images/telegram.svg" alt="">
                         </a>
                       </div>
                     <div class="item">
                       <a href="">
-                      <img src="/images/twitter.png" alt="">
+                      <img src="/images/twitter.svg" alt="">
                       </a>
                     </div>
                     <div class="item">
                       <a href="">
-                      <img src="/images/m.png" alt="">
+                      <img src="/images/m.svg" alt="">
                       </a>
                     </div>
                     <div class="item">
                       <a href="">
-                      <img src="/images/youtube.png" alt="">
+                      <img src="/images/youtube.svg" alt="">
                       </a>
                     </div>
                   </div>
@@ -107,6 +133,18 @@ import SvgImport from '~/components/layout/SvgImport'
 
 export default {
   name: "FooterComponent",
+  data: () => ({
+    statusShowItem: {},
+  }),
+  methods: {
+    showItem(id) {
+      if (this.statusShowItem[id]) {
+        this.$set(this.statusShowItem, id, false);
+      } else {
+        this.$set(this.statusShowItem, id, true);
+      }
+    },
+  },
   components:{
     SvgImport,
   }

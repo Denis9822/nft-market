@@ -10,13 +10,15 @@
                   Earn up to 20% from friends’ swap commission on Biswap <br>and 5% from their earnings on Farms & Launchpools                </h2>
               <a href="">
               <div class="add_ref">
-                  <img src="/images/people.png" alt="">
+                  <img src="/images/people.svg" alt="">
                   <span>Invite friends</span>
                 </div>
               </a>
             </div>
           </div>
-        <img class="ido_img" src="/images/refferal-img.png" alt="">
+        <img class="ido_img pc" src="/images/refferal-img.png" alt="">
+        <img class="ido_img tablet" src="/images/referral-bg-mob.png" alt="">
+        <img class="ido_img mob" src="/images/referral-bg-mob2.png" alt="">
       </div>
       <div class="bg_w">
         <div class="container">
@@ -24,7 +26,7 @@
               <div class="title_wrap">
                 <h2>How to invite friends?</h2>
                 <div class="investor">
-                  <img src="/images/ido-what.png" alt="">
+                  <img src="/images/ido-what.svg" alt="">
                   <span>my inviter:</span>
                   <p>78asd...dfiud</p>
                   <div>
@@ -85,7 +87,7 @@
               <li  v-for="(faq, index) in faqItems" :key="index" class="item_wrap" :class="{'column-break':index == 6}" >
                 <div @click="showItem(index)" class="item">
                   <span>{{faq.question}}</span>
-                  <img :class="{'active':statusShowItem[index]}" src="/images/down.png" alt="">
+                  <img :class="{'active':statusShowItem[index]}" src="/images/down.svg" alt="">
                 </div>
                 <div class="item_hidden" :class="{'active':statusShowItem[index]}">
                   {{faq.answer}}

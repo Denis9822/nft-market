@@ -14,9 +14,7 @@
                 <span>Fee Return:</span>
                 <p>0.000000 BSW</p>
               </div>
-              <div class="help">
-                <Helper typeImg="1" nameImg="help.png"/>
-              </div>
+
             </div>
             <a href="">
               Withdraw
@@ -28,9 +26,7 @@
                 <span>Robl Boost:</span>
                 <p>0.00000 RB</p>
               </div>
-              <div class="help right-m">
-                <Helper typeImg="1" nameImg="help.png"/>
-              </div>
+
             </div>
             <a href="">
               Use

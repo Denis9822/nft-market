@@ -27,7 +27,7 @@
           </div>
         </div>
         <div @click="swap()" class="change">
-          <img src="/images/Swipe.png" alt="">
+          <img src="/images/Swipe.svg" alt="">
         </div>
         <div class="input_w">
           <div v-if="typeFrom == 1" class="txt">
@@ -52,7 +52,7 @@
           Price
         </div>
         <div class="right">
-          <span >{{coinInfo().price}} {{coinInfo().name1}} per {{coinInfo().name2}}</span>
+          <span >{{parseFloat(coinInfo().price).toFixed(5)}} {{coinInfo().name1}} per {{coinInfo().name2}}</span>
           <img @click="swapPricePerCoins = !swapPricePerCoins" src="/images/unlock.png" alt="">
         </div>
       </div>

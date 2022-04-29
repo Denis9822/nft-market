@@ -1,6 +1,6 @@
 <template>
   <div class="support">
-    <img src="/images/support.png" alt="">
+    <img src="/images/support.svg" alt="">
   </div>
 </template>
 

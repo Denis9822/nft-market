@@ -12,12 +12,14 @@
               <a href="">
                 <div class="add">
                   <span>Launch your project</span>
-                  <img src="/images/plus.png" alt="">
+                  <img src="/images/plus.svg" alt="">
                 </div>
               </a>
             </div>
           </div>
-        <img class="ido_img" src="/images/ido-img.png" alt="">
+        <img class="ido_img pc" src="/images/ido-img.png" alt="">
+        <img class="ido_img tablet" src="/images/ido_mob_faq.png" alt="">
+        <img class="ido_img mob" src="/images/ido_mob2_faq.png" alt="">
       </div>
       <div class="bg_w">
         <div class="container">
@@ -29,8 +31,8 @@
             <div class="list">
                 <div class="about">
                     <div class="logo_status">
-                      <img src="/images/xps-full.png" alt="">
-                      <img src="/images/xps-logo.png" alt="">
+                      <img src="/images/coins/xps.svg" alt="">
+                      <img src="/images/coins/expansion.svg" alt="">
                       <span>Ended</span>
                     </div>
                   <div class="desc">
@@ -38,35 +40,38 @@
                   </div>
                   <div class="social">
                     <a href="">
-                      <img src="/images/telegram.png" alt="">
+                      <img src="/images/telegram.svg" alt="">
                     </a>
                     <a href="">
-                      <img src="/images/twitter.png" alt="">
+                      <img src="/images/twitter.svg" alt="">
                     </a>
                     <a href="">
-                      <img src="/images/m.png" alt="">
+                      <img src="/images/m.svg" alt="">
+                    </a>
+                    <a href="">
+                      <img src="/images/youtube.svg" alt="">
                     </a>
                   </div>
                   <div class="links">
                     <a href="">
                         <span>Website</span>
-                        <img src="/images/link.png" alt="">
+                        <img src="/images/link.svg" alt="">
                     </a>
                     <a href="">
                       <span>Whitepaper</span>
-                      <img src="/images/link.png" alt="">
+                      <img src="/images/link.svg" alt="">
                     </a>
                     <a href="">
                       <span>View Contract</span>
-                      <img src="/images/link.png" alt="">
+                      <img src="/images/link.svg" alt="">
                     </a>
                   </div>
                 </div>
                 <div class="option">
                   <div class="top">
                       <div class="imgs">
-                        <img class="big" src="/images/xps-full.png" alt="">
-                        <img class="small" src="/images/bsw-full.png" alt="">
+                        <img class="big" src="/images/coins/xps.svg" alt="">
+                        <img class="small" src="/images/coins/bsw.svg" alt="">
                       </div>
                       <div class="about">
                           <div class="row">
@@ -75,7 +80,7 @@
                           </div>
                           <h3>Deposit BSW - Get XPS</h3>
                           <div class="btn">
-                            <img src="/images/bsw-full.png" alt="">
+                            <img src="/images/coins/bsw.svg" alt="">
                             <span>57.17 BSW</span>
                           </div>
                       </div>
@@ -106,8 +111,8 @@
                 <div class="option">
                   <div class="top">
                     <div class="imgs">
-                      <img class="big" src="/images/xps-full.png" alt="">
-                      <img class="small" src="/images/bsw-full.png" alt="">
+                      <img class="big" src="/images/coins/xps.svg" alt="">
+                      <img class="small" src="/images/coins/bsw.svg" alt="">
                     </div>
                     <div class="about">
                       <div class="row">
@@ -116,7 +121,7 @@
                       </div>
                       <h3>Deposit BSW - Get XPS</h3>
                       <div class="btn">
-                        <img src="/images/bsw-full.png" alt="">
+                        <img src="/images/coins/bsw.svg" alt="">
                         <span>Unlimited</span>
                       </div>
                     </div>
@@ -154,7 +159,7 @@
                   <div class="count count1">
                     1
                   </div>
-                <img src="/images/how-to-1.png" alt="">
+                <img src="/images/how-to-1.svg" alt="">
                 <h4>Prepare BSW</h4>
                 <span>Prepare BSW in your wallet before the <br>IDO Launchpad starts on Biswap.</span>
               </div>
@@ -185,7 +190,7 @@
                 <li  v-for="(faq, index) in faqItems" :key="index" class="item_wrap" :class="{'column-break':index == 3}" >
                   <div @click="showItem(index)" class="item">
                       <span>{{faq.question}}</span>
-                      <img :class="{'active':statusShowItem[index]}" src="/images/down.png" alt="">
+                      <img :class="{'active':statusShowItem[index]}" src="/images/down.svg" alt="">
                   </div>
                   <div class="item_hidden" :class="{'active':statusShowItem[index]}">
                     {{faq.answer}}
@@ -197,7 +202,7 @@
             <div class="bg-1"></div>
             <div class="bg-2"></div>
             <div class="img">
-              <img src="/images/apply-project.png" alt="">
+              <img src="/images/apply-project.svg" alt="">
             </div>
             <div class="column">
               <h2>Want to launch your project <br> on Biswap IDO Launchpad?</h2>

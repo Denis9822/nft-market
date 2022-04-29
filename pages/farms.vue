@@ -5,7 +5,19 @@
           <div class="bg-ellipse-green"></div>
           <div class="container">
             <div class="column">
+              <div class="wr">
                 <h1>Farms</h1>
+                <div @click="detailFarms = !detailFarms" class="details mob">
+                    <span>Details</span>
+                  <div class="" :class="{'hidden-mob':detailFarms == true}">
+                  <SvgImport name="details-arrow-up"/>
+                  </div>
+                  <div class="" :class="{'hidden-mob':detailFarms == false}" >
+                  <SvgImport name="details-arrow-down"/>
+                  </div>
+                </div>
+              </div>
+              <div class="block" :class="{'hidden-mob':detailFarms == true}" >
                 <h2>
                   Biswap Farms offer multiple farming opportunities to you. <br>Get double rewards by staking your LP tokens in return for
                   <br>additional BSW tokens and earning high income from <br>swap transactions
@@ -13,11 +25,12 @@
               <a href="">
                 <div class="add">
                   <span>Add project</span>
-                  <img src="/images/plus.png" alt="">
+                  <img src="/images/plus.svg" alt="">
                 </div>
               </a>
+              </div>
             </div>
-            <div class="column">
+            <div class="column" :class="{'hidden-mob':detailFarms == true}">
                 <div class="cyberdex">
                       <div class="d_flex">
                           <span>Use CyberDex <br>on mobile phone</span>
@@ -74,14 +87,14 @@
           </div>
 
           <div class="coin_wrap">
-              <div class="row">
+            <div class="row after">
                   <div class="status red">
                     Hot
                   </div>
                   <div class="coins">
                       <div class="imgs">
-                        <img src="/icons/usdt.png" alt="">
-                        <img src="/icons/bsw.png" alt="">
+                        <img src="/images/coins/usdt.svg" alt="">
+                        <img src="/images/coins/bsw.svg" alt="">
                       </div>
                       <div class="name">
                           USDT-BSW
@@ -123,6 +136,22 @@
                     <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
                   </div>
               </div>
+            <div v-if="detailsRow" class="row mob row_hidden_mob">
+              <div class="apr2">
+                <h4>APR</h4>
+              </div>
+              <div class="btn_next">
+                  <span>219.46%</span>
+                  <img src="/images/farms-computing.png" alt="">
+              </div>
+              <div class="liquidity">
+                <h4>Liquidity</h4>
+              </div>
+              <div class="liquidity_d_flex">
+                <span>$15 479 471</span>
+                <Helper typeImg="1" nameImg="farms-help.png" />
+              </div>
+            </div>
             <div v-if="detailsRow" class="row row_hidden">
               <div class="getlp">
                 Get LP
@@ -151,14 +180,14 @@
                 <p>$0.0000</p>
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status red">
                 Hot
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -200,14 +229,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status red">
                 Hot
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -249,14 +278,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status green">
                 New
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -298,14 +327,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status blue">
                 Boosted
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -347,14 +376,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status blue">
                 Boosted
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -396,14 +425,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status blue">
                 Boosted
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -445,14 +474,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status blue">
                 Boosted
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -494,14 +523,14 @@
                 <DetailsHelper typeImg="1" nameImg="farms-warning.png" />
               </div>
             </div>
-            <div class="row">
+            <div class="row after">
               <div class="status blue">
                 Boosted
               </div>
               <div class="coins">
                 <div class="imgs">
-                  <img src="/icons/usdt.png" alt="">
-                  <img src="/icons/bsw.png" alt="">
+                  <img src="/images/coins/usdt.svg" alt="">
+                  <img src="/images/coins/bsw.svg" alt="">
                 </div>
                 <div class="name">
                   USDT-BSW
@@ -560,7 +589,7 @@
                 </div>
                 </a>
               </div>
-             <img src="/images/launch-img.png" alt="">
+             <img src="/images/launch-img.svg" alt="">
            </div>
          </div>
         <div class="why">
@@ -568,34 +597,82 @@
                 <div class="title">
                   Why choose us?
                 </div>
-               <div class="why_w">
+              <div class="slider mob">
+                <div class="slider_wrap">
+                  <carousel v-if="!loading" perPage="1" paginationEnabled="false" navigationEnabled="false">
+                    <slide>
+                      <div class="slider_item">
+                        <img src="/images/why1.png" alt="">
+                        <h3>Global Exposure</h3>
+                        <span>Get access to 380k+ Biswap users <br>across the globe.</span>
+                      </div>
+                    </slide>
+                    <slide>
+                      <div class="slider_item">
+                        <img src="/images/why2.png" alt="">
+                        <h3>Liquidity</h3>
+                        <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
+                      </div>
+                    </slide>
+                    <slide>
+                      <div class="slider_item">
+                        <img src="/images/why3.png" alt="">
+                        <h3>Token Distribution</h3>
+                        <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
+                      </div>
+                    </slide>
+                    <slide>
+                      <div class="slider_item">
+                        <img src="/images/why4.png" alt="">
+                        <h3>Trading Competition</h3>
+                        <span>Biswap will organize a tournament <br>dedicated to your project to maximize <br>trading volume with your token.</span>
+                      </div>
+                    </slide>
+                    <slide>
+                      <div class="slider_item">
+                        <img src="/images/why5.png" alt="">
+                        <h3>Marketing Boost</h3>
+                        <span>Your project will be promoted across all <br>our social media platforms with an <br>audience of over 320K+.</span>
+                      </div>
+                    </slide>
+                    <slide>
+                      <div class="slider_item">
+                        <img src="/images/why6.png" alt="">
+                        <h3>Marketing Boost</h3>
+                        <span>Your token might also be added to <br>Biswap Farms with high APR.</span>
+                      </div>
+                    </slide>
+                  </carousel>
+                </div>
+              </div>
+               <div class="why_w pc-mob">
                   <div class="wrap">
-                    <img src="/images/why1.png" alt="">
+                    <img src="/images/why1.svg" alt="">
                     <h3>Global Exposure</h3>
                     <span>Get access to 380k+ Biswap users <br>across the globe.</span>
                   </div>
                   <div class="wrap">
-                    <img src="/images/why2.png" alt="">
+                    <img src="/images/why2.svg" alt="">
                     <h3>Liquidity</h3>
                     <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
                   </div>
                 <div class="wrap">
-                  <img src="/images/why3.png" alt="">
+                  <img src="/images/why3.svg" alt="">
                   <h3>Token Distribution</h3>
                   <span>Projects launched on Biswap <br>Launchpool will be listed and have high <br>trading liquidity.</span>
                 </div>
                 <div class="wrap">
-                  <img src="/images/why4.png" alt="">
+                  <img src="/images/why4.svg" alt="">
                   <h3>Trading Competition</h3>
                   <span>Biswap will organize a tournament <br>dedicated to your project to maximize <br>trading volume with your token.</span>
                 </div>
                 <div class="wrap">
-                  <img src="/images/why5.png" alt="">
+                  <img src="/images/why5.svg" alt="">
                   <h3>Marketing Boost</h3>
                   <span>Your project will be promoted across all <br>our social media platforms with an <br>audience of over 320K+.</span>
                 </div>
                 <div class="wrap">
-                  <img src="/images/why6.png" alt="">
+                  <img src="/images/why6.svg" alt="">
                   <h3>Marketing Boost</h3>
                   <span>Your token might also be added to <br>Biswap Farms with high APR.</span>
                 </div>
@@ -628,6 +705,7 @@ export default {
       selectActive:false,
       selectData:'All',
       detailsRow:false,
+      detailFarms:true,
     }
   },
   components:{
