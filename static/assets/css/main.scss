@@ -6400,8 +6400,8 @@ footer {
   }
   header {
     width: 100vw;
-    background: #090917;
-    position: fixed;
+    //background: #090917;
+    //position: fixed;
     padding: 16px;
     margin-top: 0;
 
@@ -7610,5 +7610,16 @@ footer {
     position: relative;
     top: 0.8px;
   }
-
+  .main_section{
+    position: relative;
+  }
+  .slider_lets-go{
+    position: relative;
+  }
+  .VueCarousel-wrapper{
+    position: relative;
+  }
+  .slider_lets-go .slider_wrap .slider_item{
+    position: relative;
+  }
 }
