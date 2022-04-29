@@ -76,7 +76,7 @@
                       <div class="about">
                           <div class="row">
                               <span>Limited Option</span>
-                              <img src="/images/ado-what.png" alt="">
+                              <img src="/images/ido-what.svg" alt="">
                           </div>
                           <h3>Deposit BSW - Get XPS</h3>
                           <div class="btn">
@@ -117,7 +117,7 @@
                     <div class="about">
                       <div class="row">
                         <span>Limited Option</span>
-                        <img src="/images/ado-what.png" alt="">
+                        <img src="/images/ido-what.svg" alt="">
                       </div>
                       <h3>Deposit BSW - Get XPS</h3>
                       <div class="btn">

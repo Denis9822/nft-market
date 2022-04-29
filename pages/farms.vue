@@ -599,7 +599,7 @@
                 </div>
               <div class="slider mob">
                 <div class="slider_wrap">
-                  <carousel v-if="!loading" perPage="1" paginationEnabled="false" navigationEnabled="false">
+                  <carousel v-if="!loading" :perPage="1" :paginationEnabled="false" :navigationEnabled="false">
                     <slide>
                       <div class="slider_item">
                         <img src="/images/why1.png" alt="">
@@ -699,6 +699,7 @@ export default {
   },
   data: function () {
     return {
+      loading: true,
       typeActive:"live",
       staked:false,
       search:null,
@@ -707,6 +708,11 @@ export default {
       detailsRow:false,
       detailFarms:true,
     }
+  },
+  created() {
+    this.$nextTick(function() {
+      this.loading = false
+    })
   },
   components:{
     SvgImport,

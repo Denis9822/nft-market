@@ -125,7 +125,7 @@
   <div class="container">
     <div class="slider_lets-go pc-mob ">
         <div class="slider_wrap">
-          <carousel v-if="!loading" perPage="3" paginationPadding="5" navigationEnabled="true">
+          <carousel v-if="!loading" :perPage="3" :paginationPadding="paggPadding" :navigationEnabled="true">
             <slide>
               <div class="slider_item si1">
                 <div class="wrap">
@@ -213,7 +213,7 @@
     </div>
     <div class="slider_lets-go mob">
       <div class="slider_wrap">
-        <carousel v-if="!loading" perPage="1" paginationPadding="5" navigationEnabled="true">
+        <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" :navigationEnabled="true">
           <slide>
             <div class="slider_item si1">
               <div class="wrap">
@@ -304,7 +304,7 @@
             <div class="title_w">
                 <span>Earn CYD + Fees in Farms</span>
               <a href="">
-                <img src="/icons/arrow-right.png" alt="">
+                <img src="/icons/arrow-right.svg" alt="">
               </a>
             </div>
             <div class="content_w">
@@ -455,7 +455,7 @@
         <div class="title_w">
           <span>Launchpools</span>
           <a href="">
-          <img src="/icons/arrow-right.png" alt="">
+          <img src="/icons/arrow-right.svg" alt="">
           </a>
         </div>
         <div class="content_w content_w--style-2">
@@ -583,7 +583,7 @@
         <div class="title">Our Benefits</div>
         <div class="slider_benefits mob">
           <div class="slider_wrap">
-            <carousel v-if="!loading" perPage="1" paginationPadding="5" navigationEnabled="true">
+            <carousel v-if="!loading" :perPage="1" :paginationPadding="paggPadding" :navigationEnabled="true">
               <slide>
                 <div class="slider_item">
                     <img src="/images/benefits1.svg" alt="">
@@ -700,7 +700,7 @@
             <div class="slider pc-mob">
                   <div class="slider_bg"></div>
                 <div class="slider_wrap">
-                    <carousel v-if="!loading" perPage="3" paginationEnabled="false" navigationEnabled="false">
+                    <carousel v-if="!loading" :perPage="3" :paginationEnabled="false" :navigationEnabled="false">
                       <slide>
                         <div class="slider_item">
                           <img src="/images/review-slide1.svg" alt="">
@@ -775,7 +775,7 @@
             <div class="slider mob">
               <div class="slider_bg"></div>
               <div class="slider_wrap">
-                <carousel v-if="!loading" perPage="1" paginationEnabled="false" navigationEnabled="false" loop="true" autoplay="true">
+                <carousel v-if="!loading" :perPage="1" :paginationEnabled="false" :navigationEnabled="false" :loop="true" :autoplay="true">
                   <slide>
                     <div class="slider_item">
                       <img src="/images/review-slide1.svg" alt="">
@@ -983,7 +983,7 @@ import SelectToken from '~/components/modals/SelectToken';
 export default {
   data: () => ({
     loading: true,
-
+    paggPadding: 5,
   }),
   mounted() {
     this.$nuxt.$emit('active-page', 1);

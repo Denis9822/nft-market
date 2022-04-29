@@ -366,7 +366,7 @@
             </div>
             <div class="slider mob">
               <div class="slider_wrap">
-                <carousel v-if="!loading" perPage="1" paginationEnabled="false" loop="true" navigationEnabled="false" autoplay="true">
+                <carousel v-if="!loading" :perPage="1" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true">
                   <slide>
                     <div class="slider_item">
                       <img src="/images/why1.svg" alt="">
@@ -465,6 +465,7 @@ export default {
   },
   data: function () {
     return {
+      loading: true,
       stakePage:"bsw",
       typeActive:'active',
       staked:false,
@@ -472,6 +473,11 @@ export default {
       selectData: 'All',
       detailFarms:true,
     }
+  },
+  created() {
+    this.$nextTick(function() {
+      this.loading = false
+    })
   },
   components:{
     SvgImport,
