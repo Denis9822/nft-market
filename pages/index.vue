@@ -6,72 +6,7 @@
       <div class="container">
 
           <div class="currency_lists">
-            <div class="currency_item">
-                <img src="/images/coins/fil.svg" alt="">
-                <div class="wrap">
-                      <div class="currency_name">
-                          Fil
-                          <span class="green">+3.43</span>
-                      </div>
-                      <div class="currency_price">
-                        $19.05
-                      </div>
-                </div>
-              </div>
-            <div class="currency_item">
-              <img src="/images/coins/btcb.svg" alt="">
-              <div class="wrap">
-                <div class="currency_name">
-                  BTCB
-                  <span class="red">-1.99%</span>
-                </div>
-                <div class="currency_price">
-                  $42.044.63
-                </div>
-              </div>
-            </div>
-            <div class="currency_item">
-              <img src="/images/coins/ada.svg" alt="">
-              <div class="wrap">
-                <div class="currency_name">
-                  ADA
-                  <span class="red">+6.66%</span>
-                </div>
-                <div class="currency_price">
-                  $1.04
-                </div>
-              </div>
-            </div>
-            <div class="currency_item">
-              <img src="/images/coins/doge.svg" alt="">
-              <div class="wrap">
-                <div class="currency_name">
-                  DOGE
-                  <span class="red">-1.19%</span>
-                </div>
-                <div class="currency_price">
-                  $0.12
-                </div>
-              </div>
-            </div>
-            <div class="currency_item">
-              <img src="/images/coins/trx.svg" alt="">
-              <div class="wrap">
-                <div class="currency_name">
-                  TRX
-                  <span class="red">+3.56%</span>
-                </div>
-                <div class="currency_price">
-                  $0.06
-                </div>
-              </div>
-            </div>
-            <div class="currency_all pc-mob">
-              <a href="">
-                <span>All Markets</span>
-                <img src="/images/right.png" alt="">
-              </a>
-            </div>
+
           </div>
       </div>
   </div>
