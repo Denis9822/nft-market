@@ -6,6 +6,18 @@
       <div class="container">
 
           <div class="currency_lists">
+            <div class="currency_item">
+                <img src="/images/coins/fil.svg" alt="">
+                <div class="wrap">
+                      <div class="currency_name">
+                          Fil
+                          <span class="green">+3.43</span>
+                      </div>
+                      <div class="currency_price">
+                        $19.05
+                      </div>
+                </div>
+              </div>
 
           </div>
       </div>
