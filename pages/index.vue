@@ -777,7 +777,7 @@
               <div class="slider_wrap">
                 <carousel v-if="!loading" :perPage="1" :paginationEnabled="false" :navigationEnabled="false" :loop="true" :autoplay="true">
                   <slide>
-
+                    <div class="slider_item">
                       <img src="/images/review-slide1.svg" alt="">
                       <span>Biswap passes the 1 billion <br> transactions millestone and is listed <br>
                               amongst the top Des and BSC in a <br> more few months after its launch</span>
@@ -786,10 +786,10 @@
                         <SvgImport name="arrow-right-read"/>
                       </div>
                       <div class="bg"></div>
-
+                    </div>
                   </slide>
                   <slide>
-
+                    <div class="slider_item">
                       <img src="/images/review-slide2.svg" alt="">
                       <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br>  network.</span>
                       <div class="read">
@@ -797,10 +797,10 @@
                         <SvgImport name="arrow-right-read"/>
                       </div>
                       <div class="bg"></div>
-
+                    </div>
                   </slide>
                   <slide>
-
+                    <div class="slider_item">
                       <img src="/images/review-slide3.svg" alt="">
                       <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br> network.</span>
                       <div class="read">
@@ -808,10 +808,10 @@
                         <SvgImport name="arrow-right-read"/>
                       </div>
                       <div class="bg"></div>
-
+                    </div>
                   </slide>
                   <slide>
-
+                    <div class="slider_item">
                       <img src="/images/review-slide1.svg" alt="">
                       <span>Biswap passes the 1 billion <br> transactions millestone and is listed <br>
                               amongst the top Des and BSC in a <br> more few months after its launch</span>
@@ -820,10 +820,10 @@
                         <SvgImport name="arrow-right-read"/>
                       </div>
                       <div class="bg"></div>
-
+                    </div>
                   </slide>
                   <slide>
-
+                    <div class="slider_item">
                       <img src="/images/review-slide2.svg" alt="">
                       <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br>  network.</span>
                       <div class="read">
@@ -831,10 +831,10 @@
                         <SvgImport name="arrow-right-read"/>
                       </div>
                       <div class="bg"></div>
-
+                    </div>
                   </slide>
                   <slide>
-
+                    <div class="slider_item">
                       <img src="/images/review-slide3.svg" alt="">
                       <span>Biswap is among the top 10 Most <br> Valuable Builders on the BSC <br> network.</span>
                       <div class="read">
@@ -842,7 +842,7 @@
                         <SvgImport name="arrow-right-read"/>
                       </div>
                       <div class="bg"></div>
-
+                    </div>
                   </slide>
                 </carousel>
               </div>
