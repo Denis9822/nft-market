@@ -815,7 +815,7 @@ header {
     }
   }
   .slider_wrap {
-    position: relative;
+
 
     .slider_item {
 
@@ -6498,13 +6498,18 @@ footer {
   .slider_lets-go .VueCarousel-navigation button {
     display: none;
   }
+  .slider_lets-go{
+    margin-right: 16px;
+    margin-left: 16px;
+  }
   .slider_lets-go .slider_wrap .slider_item {
     height: 155px;
     background-size: 126% 143%;
     padding-right: 20px;
     padding-left: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+
 
     .slider_img {
       width: 95px;

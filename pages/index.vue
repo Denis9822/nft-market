@@ -970,6 +970,9 @@
               </div>
           </div>
       </div>
+
+
+
   </div>
     <SelectToken />
   </div>
@@ -980,10 +983,16 @@ import SvgImport from '~/components/layout/SvgImport';
 import Helper from '~/components/Helper';
 import SelectToken from '~/components/modals/SelectToken';
 
+
 export default {
   data: () => ({
     loading: true,
     paggPadding: 5,
+    flickityOptions: {
+      initialIndex: 3,
+      pageDots: true,
+      wrapAround: true
+    }
   }),
   mounted() {
     this.$nuxt.$emit('active-page', 1);
